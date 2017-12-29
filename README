@@ -1,0 +1,1 @@
+awk '{print "\""$1"\":\""$2"\","}' gys2iht | while IFS= read -r line; do printf '%q\n' "$line"; done | xargs -L20 >> exome-annotation.py
